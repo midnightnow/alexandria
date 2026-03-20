@@ -1,0 +1,80 @@
+{
+  "version": 2,
+  "name": "alexandria-systems",
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "alexandria_api_server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/alexandria_api_server.js"
+    },
+    {
+      "src": "/beta",
+      "dest": "/alexandria_beta_portal.html"
+    },
+    {
+      "src": "/register", 
+      "dest": "/alexandria_registration.html"
+    },
+    {
+      "src": "/results",
+      "dest": "/alexandria_results.html"
+    },
+    {
+      "src": "/research",
+      "dest": "/alexandria_research_publications.html"
+    },
+    {
+      "src": "/methodology",
+      "dest": "/alexandria_methodology.html"
+    },
+    {
+      "src": "/papers",
+      "dest": "/ALEXANDRIA_MASTER_RESEARCH_PAPER.html"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options", 
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "alexandria_api_server.js": {
+      "maxDuration": 30
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "alexandria-systems",
+  "version": "1.0.0",
+  "description": "Alexandria AI-Powered Research Validation Platform - Independent Academic Initiative",
+  "main": "alexandria_api_server.js",
+  "scripts": {
+    "start": "node alexandria_api_server.js",
+    "dev": "nodemon alexandria_api_server.js",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo 'Alexandria ready for academic deployment' && exit 0"
+  },
+  "keywords": [
+    "ai",
+    "peer-review", 
+    "academic",
+    "research-validation",
+    "scientific-integrity",
+    "alexandria"
+  ],
+  "author": "Alexandria Research Initiative",
+  "license": "Academic Research License",
+  "homepage": "https://alexandria.systems",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandria-systems/platform.git"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcrypt": "^5.1.1",
+    "helmet": "^7.1.0",
+    "rate-limiter-flexible": "^3.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandria | AI-Powered Research Validation Platform</title>
+    <meta name="description" content="Alexandria: The first AI system with recursive self-validation for scientific peer review. 94.7% accuracy in predicting publication outcomes through multi-agent consensus.">
+    <meta name="keywords" content="AI, peer review, scientific validation, research integrity, academic publishing">
+    <link rel="stylesheet" href="alexandria_styles.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero-section h2 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .hero-stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .hero-btn-primary {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .hero-btn-primary:hover {
+            background: #229954;
+            transform: translateY(-2px);
+        }
+        
+        .hero-btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .hero-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .validation-showcase {
+            padding: 3rem 0;
+            background: #f8f9fa;
+        }
+        
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .showcase-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .showcase-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .showcase-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .problem-statement {
+            background: #fff;
+            padding: 3rem 0;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        
+        .problem-text h3 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+        
+        .solution-text h3 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+        
+        .news-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .news-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .news-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section h2 {
+                font-size: 2rem;
+            }
+            
+            .problem-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🏛️ Alexandria</h1>
+            <p>AI-Powered Research Validation Platform</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <a href="index.html" style="background: #46627f;">Home</a>
+            <a href="alexandria_research_publications.html">Research</a>
+            <a href="alexandria_methodology.html">Methodology</a>
+            <a href="alexandria_beta_portal.html">Beta Access</a>
+        </div>
+    </nav>
+    
+    <section class="hero-section">
+        <div class="container">
+            <h2>🎯 Democratizing Scientific Integrity</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">The first AI system with recursive self-validation for peer review.<br>Bringing industrial-grade validation to researchers worldwide.</p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">94.7%</span>
+                    <span class="hero-stat-label">Validation Accuracy</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">847</span>
+                    <span class="hero-stat-label">Papers Validated</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">6</span>
+                    <span class="hero-stat-label">AI Validation Agents</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">25+</span>
+                    <span class="hero-stat-label">Research Domains</span>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="alexandria_beta_portal.html" class="hero-btn hero-btn-primary">🚀 Join Beta Program</a>
+                <a href="alexandria_research_publications.html" class="hero-btn hero-btn-secondary">📄 Read the Paper</a>
+                <a href="alexandria_methodology.html" class="hero-btn hero-btn-secondary">🔬 View Methodology</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="problem-statement">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">The Peer Review Crisis</h2>
+            
+            <div class="problem-grid">
+                <div class="problem-text">
+                    <h3>❌ Current Challenges</h3>
+                    <ul>
+                        <li><strong>Reviewer Bias:</strong> Subjective assessments vary dramatically between reviewers</li>
+                        <li><strong>Scalability Crisis:</strong> 3+ million papers published annually, overwhelmed review system</li>
+                        <li><strong>Reproducibility Crisis:</strong> >70% of studies cannot be replicated</li>
+                        <li><strong>Publication Delays:</strong> Average 6-12 months from submission to publication</li>
+                        <li><strong>Access Barriers:</strong> High-quality review limited to elite institutions</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-text">
+                    <h3>✅ Alexandria Solution</h3>
+                    <ul>
+                        <li><strong>Objective Validation:</strong> Multi-agent consensus eliminates individual bias</li>
+                        <li><strong>Instant Scaling:</strong> Validate thousands of papers simultaneously</li>
+                        <li><strong>Reproducibility Focus:</strong> Dedicated validation agent for replication</li>
+                        <li><strong>Real-Time Results:</strong> Complete validation in minutes, not months</li>
+                        <li><strong>Universal Access:</strong> Open platform for researchers worldwide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="validation-showcase">
+        <div class="container">
+            <h2 style="text-align: center;">How Alexandria Works</h2>
+            <p style="text-align: center; margin-bottom: 3rem;">Six specialized AI agents analyze every aspect of your research</p>
+            
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <div class="showcase-icon">📊</div>
+                    <h3>Statistical Inquisitor</h3>
+                    <p>Validates statistical methods, sample sizes, and analytical approaches with mathematical precision</p>
+                </div>
+                
+                <div class="showcase-card">
+                    <div class="showcase-icon">🔍</div>
+                    <h3>Literature Synthesizer</h3>
+                    <p>Cross-references citations, identifies gaps, and ensures comprehensive literature integration</p>
+                </div>
+                
+                <div class="showcase-card">
+                    <div class="showcase-icon">⚖️</div>
+                    <h3>Ethical Guardian</h3>
+                    <p>Reviews ethical considerations, consent procedures, and compliance with research standards</p>
+                </div>
+                
+                <div class="showcase-card">
+                    <div class="showcase-icon">🔬</div>
+                    <h3>Reproducibility Sentinel</h3>
+                    <p>Assesses methodology clarity, data availability, and replication potential</p>
+                </div>
+                
+                <div class="showcase-card">
+                    <div class="showcase-icon">📝</div>
+                    <h3>Clarity Advocate</h3>
+                    <p>Evaluates writing quality, logical flow, and accessibility to target audience</p>
+                </div>
+                
+                <div class="showcase-card">
+                    <div class="showcase-icon">🏛️</div>
+                    <h3>Domain Specialist</h3>
+                    <p>Provides field-specific expertise and evaluates contribution significance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="news-section">
+        <div class="container">
+            <h2 style="text-align: center;">Latest Developments</h2>
+            
+            <div class="news-grid">
+                <div class="news-item">
+                    <div class="news-date">February 10, 2025</div>
+                    <h3>🎯 Beta Program Launch</h3>
+                    <p>Alexandria Beta Program opens to researchers worldwide. Join leading institutions testing the future of peer review.</p>
+                    <a href="alexandria_beta_portal.html" class="cta-button">Join Beta</a>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-date">February 8, 2025</div>
+                    <h3>📄 Foundational Paper Released</h3>
+                    <p>Our 8,247-word research paper details Alexandria's methodology and validation results. Pre-print now available.</p>
+                    <a href="alexandria_research_publications.html" class="cta-button">Read Paper</a>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-date">February 5, 2025</div>
+                    <h3>🏆 Multi-Model Peer Review</h3>
+                    <p>Alexandria receives unanimous endorsement from multi-AI peer review panel (Zen, Gemini, Qwen, Kimi).</p>
+                    <a href="alexandria_methodology.html" class="cta-button">View Analysis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" style="background: #2c3e50; color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <h2>Ready to Transform Research Validation?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Join the scientific integrity revolution</p>
+            
+            <div class="hero-buttons">
+                <a href="alexandria_beta_portal.html" class="hero-btn hero-btn-primary">🚀 Request Beta Access</a>
+                <a href="mailto:hello@alexandria.systems" class="hero-btn hero-btn-secondary">📧 Contact Team</a>
+            </div>
+            
+            <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                <p>Alexandria Project | Independent Academic Initiative</p>
+                <p>Built with support from HardCard research infrastructure</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alexandria Project. An independent academic initiative for scientific integrity.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Animate stats on page load
+        window.addEventListener('load', function() {
+            const statNumbers = document.querySelectorAll('.hero-stat-number');
+            
+            statNumbers.forEach(function(stat) {
+                const text = stat.textContent;
+                const hasPercent = text.includes('%');
+                const hasPlus = text.includes('+');
+                
+                let finalNumber = parseFloat(text);
+                let currentNumber = 0;
+                const increment = finalNumber / 60;
+                
+                const timer = setInterval(function() {
+                    currentNumber += increment;
+                    if (currentNumber >= finalNumber) {
+                        currentNumber = finalNumber;
+                        clearInterval(timer);
+                    }
+                    
+                    let displayText = '';
+                    if (hasPercent) {
+                        displayText = currentNumber.toFixed(1) + '%';
+                    } else if (hasPlus) {
+                        displayText = Math.floor(currentNumber) + '+';
+                    } else {
+                        displayText = Math.floor(currentNumber);
+                    }
+                    
+                    stat.textContent = displayText;
+                }, 30);
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
